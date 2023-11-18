@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Arte Verde - Home</title>
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="../lib/hover/hover.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+  <!-- Responsive css -->
+  <link href="../css/responsive.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../images/favicon.png">
+
+</head>
+
+<body>
+
+  <!-- start section navbar -->
+  <nav id="main-nav">
+    <div class="row">
+      <div class="container">
+
+        <div class="logo">
+          <a href="../index.html"><img src="../images/logo.png" alt="logo"></a>
+        </div>
+
+        <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+
+        <ul class="nav-menu list-unstyled">
+          <li><a href="../index.html#header" class="smoothScroll">Home</a></li>
+          <li><a href="../index.html#about" class="smoothScroll">A Empresa</a></li>
+          <li><a href="../index.html#services" class="smoothScroll">Serviços</a></li>
+          <li><a href="../index.html#portfolio" class="smoothScroll">Trabalhos</a></li>
+          <li><a href="../index.html#perfil" class="smoothScroll">Perfil</a></li>
+          <li><a href="../index.html#contact" class="smoothScroll">Contato</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <!-- End section navbar -->
+
+
+    <!-- End section navbar -->
+    <h1>Casal Piscinas</h1>
+    <div id="services">
+      <div class="container owl-container">
+        <div class="services-carousel owlcarousel owl-theme">
+          <img id="expandedImg" class="services-block">
+          <p style="text-align: center" id="msg">Clique em alguma imagem para ver ela melhor!</p>
+        </div>
+      </div>      
+      <div id="imgtext"></div>
+    </div>
+
+    
+    <!-- The four columns -->
+    
+      <div id="galeria" class="row">
+        <div class="column">
+          <img id="ft" src="../images/portifolio/projetos/CasalPiscinas/1.jpg" style="z-index: 100;" class="fth" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img id="ft" src="../images/portifolio/projetos/CasalPiscinas/2.jpg" class="fth" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img id="ft" src="../images/portifolio/projetos/CasalPiscinas/3.jpg" class="ftv" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img id="ft" src="../images/portifolio/projetos/CasalPiscinas/4.jpg" class="ftv" onclick="myFunction(this);">
+        </div>
+        
+      </div>
+    
+
+      
+<script>
+  function myFunction(imgs) {
+    var direcao = imgs.getAttribute("class");
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    var msg = document.getElementById("msg");
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+    msg.style.display = "none";
+    expandImg.src = imgs.src;
+    if(direcao == 'ftv'){
+      expandImg.style.width = '50%';
+      expandImg.style.height = '50%';
+    }
+    else{
+      expandImg.style.width = '70%';
+      expandImg.style.height = '70%';
+    }
+  }
+      </script>
+</body>
+
+</html>
